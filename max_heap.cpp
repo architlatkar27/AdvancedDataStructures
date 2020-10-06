@@ -53,7 +53,7 @@ class MaxHeap{
             cout<<x<<" not found:(\n";
             return;
         } 
-        swap(arr[i],arr[arr.size()-1]);
+        swap(&arr[i],&arr[arr.size()-1]);
         cout<<x<<" removed successfully:)\n";
         arr.erase(arr.end());
         heapify();
@@ -63,7 +63,7 @@ class MaxHeap{
     }
 
     void pop(){
-        swap(arr[0], arr[arr.size()-1]);
+        swap(&arr[0], &arr[arr.size()-1]);
         arr.erase(arr.end());
         heapify();
     }
