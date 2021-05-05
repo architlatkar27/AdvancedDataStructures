@@ -73,7 +73,7 @@ class MaxHeap{
         while(true){
             if(root*2+1 > arr.size()) break;
             int next = (arr[root*2+1] > arr[root*2+2])? root*2+1: root*2+2;
-            swap(arr[root], arr[next]);
+            swap(&arr[root], &arr[next]);
             root = next;
         }
         cout<<"heapify successful!!\n";
