@@ -74,7 +74,25 @@ bool match(TNodePtr root, string key){
     return ptr!=NULL && ptr->EOW;
 }
 
-int main(){
-
+int main()
+{
+    // Input keys (use only 'a' through 'z'
+    // and lower case)
+    string keys[] = {"the", "a", "there",
+                    "answer", "any", "by",
+                     "bye", "their" };
+    int n = sizeof(keys)/sizeof(keys[0]);
+  
+    struct TrieNode *root = getNode();
+  
+    // Construct trie
+    for (int i = 0; i < n; i++)
+        insert(root, keys[i]);
+  
+    // Search for different keys
+    match(root, "th")? cout << "Yes\n" :
+                         cout << "No\n";
+    search(root, "th")? cout << "Yes\n" :
+                           cout << "No\n";
     return 0;
 }

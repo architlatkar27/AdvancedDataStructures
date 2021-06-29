@@ -1,0 +1,8 @@
+{
+    "files.associations": {
+        "iostream": "cpp",
+        "*.tcc": "cpp",
+        "bitset": "cpp"
+    },
+    "C_Cpp.errorSquiggles": "Enabled"
+}
